@@ -10,6 +10,12 @@ FDTDUMP_SRCS = \
 
 FDTDUMP_OBJS = $(FDTDUMP_SRCS:%.c=%.o)
 
+FITDUMP_SRCS = \
+	fitdump.c \
+	util.c
+
+FITDUMP_OBJS = $(FITDUMP_SRCS:%.c=%.o)
+
 
 FDTGET_SRCS = \
 	fdtget.c \

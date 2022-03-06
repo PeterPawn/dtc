@@ -148,6 +148,7 @@ BIN += fdtdump
 BIN += fdtget
 BIN += fdtput
 BIN += fdtoverlay
+BIN += fitdump
 
 SCRIPTS = dtdiff
 
@@ -181,6 +182,7 @@ ifneq ($(MAKECMDGOALS),libfdt)
 -include $(DTC_OBJS:%.o=%.d)
 -include $(CONVERT_OBJS:%.o=%.d)
 -include $(FDTDUMP_OBJS:%.o=%.d)
+-include $(FITDUMP_OBJS:%.o=%.d)
 -include $(FDTGET_OBJS:%.o=%.d)
 -include $(FDTPUT_OBJS:%.o=%.d)
 -include $(FDTOVERLAY_OBJS:%.o=%.d)
@@ -260,6 +262,8 @@ convert-dtsv0: $(CONVERT_OBJS)
 	$(LINK.c) -o $@ $^
 
 fdtdump:	$(FDTDUMP_OBJS)
+
+fitdump:	$(FITDUMP_OBJS)
 
 fdtget:	$(FDTGET_OBJS) $(LIBFDT_lib)
 

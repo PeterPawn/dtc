@@ -11,6 +11,7 @@ lex.yy.c
 .*.swp
 /dtc
 /fdtdump
+/fitdump
 /convert-dtsv0
 /version_gen.h
 /fdtget
